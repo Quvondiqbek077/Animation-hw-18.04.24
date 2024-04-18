@@ -1,0 +1,121 @@
+body {
+    /* height: 2000px; */
+    width: 200%;
+}
+
+.road {
+    width: 100%;
+    height: 250px;
+    background-color: rgb(86, 81, 81);
+    display: flex;
+    flex-direction: column;
+    margin-top: 8%;
+    position: relative;
+    z-index: 1;
+}
+
+.road::after {
+    content: "";
+    width: 100%;
+    /* height: 2px; */
+    background-color: rgb(86, 81, 81);
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+    border: 5px white;
+    border-style: dashed;
+}
+
+/* Car */
+.car-box {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+}
+.car-body {
+    width: 500px;
+    height: 80px;
+    background-color: blue;
+    border-radius: 10px;
+    border-top-right-radius: 500px;
+    position: relative;
+}
+
+
+.car-cabinet {
+    width: 250px;
+    height: 50px;
+    background-color: rgb(76, 28, 120);
+    border-top-right-radius: 500px;
+    border-top-left-radius: 80px;
+    position: absolute;
+    top: -50px;
+    right: 80px;
+    transition: 2s;
+    
+}
+
+.shelf {
+    width: 70px;
+    height: 130px;
+    background-color: rgb(158, 158, 24);
+    border-radius: 6px 6px 0 0;
+    position: absolute;
+    top: -130px;
+    left: 50px;
+}
+
+.car-cabinet::before {
+    content: "";
+    height: 157%;
+    width: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -80px;;
+}
+
+.car-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    /* transform: rotate(45deg); */
+}
+
+.car-circle::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.car-circle::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+.left {
+    left: 40px;
+    bottom: -25px;
+}
+
+.left2 {
+    left: 110px;
+    bottom: -25px;
+}
+
+.right {
+    right: 50px;
+    bottom: -25px;
+}
